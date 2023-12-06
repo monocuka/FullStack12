@@ -1,0 +1,23 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+header{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 2%;
+    background-color: rgb(145, 145, 145);
+}
+#titulo{
+    width: 30%;
+}
+#elMenu{
+    width: 70%;
+}
+nav > ul {
+    display: flex;
+    padding: 5%;
+    justify-content: space-around;
+    
+}
