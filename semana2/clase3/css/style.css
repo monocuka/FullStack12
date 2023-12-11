@@ -1,23 +1,86 @@
 *{
-    padding: 0;
     margin: 0;
+    padding: 0;
 }
-header{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    padding: 2%;
-    background-color: rgb(145, 145, 145);
+body {
+
 }
-#titulo{
-    width: 30%;
-}
-#elMenu{
-    width: 70%;
-}
-nav > ul {
-    display: flex;
-    padding: 5%;
-    justify-content: space-around;
+
+#cabecera {
     
+}
+
+#titulo {
+
+}
+
+#elMenu {
+    
+}
+
+.menus {
+
+}
+
+.menus li {
+    
+}
+
+#main {
+    
+}
+
+#descripcion, .info, #info-Contact {
+    
+}
+
+.card {
+    
+}
+
+.Btn {
+    
+}
+
+.Btn:hover {
+    
+}
+
+footer {
+    
+}
+
+.social-icons img {
+    
+}
+
+.social-icons a {
+    
+}
+
+/* Media query para hacer el sitio web responsive */
+@media (max-width: 768px) {
+    #main {
+        
+    }
+
+    .card {
+        
+    }
+
+    #cabecera {
+        
+    }
+
+    #elMenu {
+        
+    }
+
+    .menus {
+        
+    }
+
+    .menus li {
+        
+    }
 }
