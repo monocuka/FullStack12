@@ -118,3 +118,17 @@ switch(dia){
 //operador ternario
 
 persona.sexo == "M" ? console.log("es un hombre") : console.log(" es una mujer");
+// ciclos //  bucles, loops 
+//For
+console.log("un elefante se balanceaba sobre la tela de una araña, como veia que resisitia fue a llamar a otro elefante");
+console.log("do elefante se balanceaban sobre la tela de una araña, como veian que resisitia fue a llamar a otro elefante");
+console.log("tres elefante se balanceaban sobre la tela de una araña, como veian que resisitia fue a llamar a otro elefante");
+console.log("cuatro elefante se balanceaban sobre la tela de una araña, como veia que resisitia fue a llamar a otro elefante");
+console.log("cinco elefante se balanceaban sobre la tela de una araña, como veia que resisitia fue a llamar a otro elefante");
+for (let contador = 1; contador <= 5; contador++){
+    if (contador === 1) {
+        console.log(contador + " elefante se balanceaba sobre la tela de una araña, como veia que resisitia fue a llamar a otro elefante");
+    }else{
+    console.log(contador + " elefantes se balanceaban sobre la tela de una araña, como veian que resisitia fue a llamar a otro elefante");
+    }
+}
