@@ -1,23 +1,147 @@
 *{
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding: 0;
     margin: 0;
+    background-color: rgb(250, 247, 242);
 }
-header{
+
+#cabecera {
     width: 100%;
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background-color: #B9B9B9;
+    padding: 3%;
+}
+
+#titulo {
+    width: 40%;
+    color: rgb(255, 25, 0);
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#elMenu {
+    width: 55%;
     padding: 2%;
-    background-color: rgb(145, 145, 145);
-}
-#titulo{
-    width: 30%;
-}
-#elMenu{
-    width: 70%;
 }
 nav > ul {
+    list-style: none;
     display: flex;
-    padding: 5%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.menus li {
+    cursor: pointer;
+}
+
+#main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 1%;
+}
+#info-Contact{
+    background-color: white ;
+    width: 100%;
+    padding: 3%;
+    margin: 0 10px 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#descripcion, .info{
+    background-color: white ;
+    width: 100%;
+    padding: 8%;
+    margin: 0 10px 0 10px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+}
+#descripcion > p{
+    text-align: center;
+
+}
+.card {
+    width: 300px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 8%;
+    background-color: #B9B9B9;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card > h2, img, p{
+    width: 80%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+.card > img {
+    border-radius: 15px;
+}
+
+.Btn {
+    background-color: rgb(30, 30, 30);
+    color: aliceblue;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 3% 4%;
+    font-size: 1em ;
+
+}
+
+footer {
+    background-color: #B9B9B9;
+    color: black;
+    display: flex;
     justify-content: space-around;
-    
+    padding: 5%;
+}
+
+.social-icons img {
+    width: 30px;
+}
+
+.social-icons a {
+    text-decoration: none;
+}
+
+/* Media query para hacer el sitio web responsive */
+@media (max-width: 768px) {
+    #main {
+        
+    }
+
+    .card {
+        width: 80%;
+    }
+
+    #cabecera {
+        flex-direction: column;
+    }
+
+    #elMenu {
+        justify-content: flex-end;
+    }
+
+    .menus {
+        flex-direction: column;
+    }
+
+    .menus li {
+        margin: 2px 0 2px 0;
+    }
 }
