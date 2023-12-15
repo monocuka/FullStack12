@@ -84,13 +84,6 @@ if (edadPersona >= mayorDeEdad){
 }while(opcion != 4); */
 
 //Funciones 
-function saludar(){
-    console.log("Bienveido a este lugar");
-if (persona.edad > 18) {
-    console.log("puede jugar");
-}
-}
-saludar();
 
 const condiciones = () => {
     const edadPensionM = 62;
@@ -166,3 +159,13 @@ const condiciones = () => {
 }
 
 condiciones();
+
+function saludar(persona, edad){
+    console.log("hola, " + persona + " Bienvenid@ a este lugar");
+if (persona.edad > 18) {
+    console.log("puede jugar");
+    }
+};
+
+saludar("honeisito", 20)
+saludar(persona.nombre, persona.edad)
