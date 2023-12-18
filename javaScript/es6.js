@@ -61,3 +61,61 @@ baloto.forEach((el) => {
 const filteredNumbers = baloto.filter((el) => el >= 30);
 console.log(filteredNumbers);
 
+//HOISTING
+
+const hoisting = () => {
+    const year = 2023;
+
+    console.log(year);
+//forma incorrecta de llamar una funcion, siempre debe ir el llamado despues de la función.
+
+    const testFuntion = () => {
+        console.log("soy una prueba");
+    };
+    testFuntion();
+};
+//forma correcta 
+hoisting();
+
+//callback son funcion que se pasa como parametro dentro de otra finción.
+
+const demoCallBack = () => {
+    const saludar = (funcion)=> {
+        console.log("hola mundito ");
+        funcion();
+    }
+    const despedir = () => {
+        console.log("bye bye  adios ");
+    }
+
+    saludar(despedir)
+
+//metodo setTimeOut asincronismo  y etInterval 
+
+    const timer = (fn) =>{
+        console.log(`la siguiente funcion se ejecutara en 5 segundos`);
+        setTimeout(fn, 5000);
+    }
+    timer(despedir);
+
+    setTimeout(() => {
+        console.log(`han pasado 4 segundos`);
+    } , 4000)
+
+    //setInterval(despedir, 2000)
+    //parar un set interval
+
+const intervalo = setInterval(() => {
+    console.log("universidad");
+}, 1000);
+setTimeout(() => {
+    clearInterval(intervalo);
+}, 5000);
+}
+demoCallBack()
+
+
+
+
+
+
