@@ -1,6 +1,9 @@
 //EcmaScript6 
 //Operador Ternario, template Literals. arrow function
 
+let mes = "diciembre";
+let passPort = "hem139374j"
+
 function inicio(){
     const saludar = (nombre) => `holas ${nombre}`; 
     
@@ -20,7 +23,9 @@ inicio();
 // metodos que se puede aplicar a un array function
 //IIFE Inmediately invoked function expression -- patron de diseño
 (function () {
-    console.log("hola mundo");
+    let mes ="enero"
+    let identificacion = 1088003002;
+    console.log(`Hola Mundo ${mes} ${identificacion} ${passPort}`);
 } )();
 
 //arrays
@@ -55,3 +60,4 @@ baloto.forEach((el) => {
 //metodo filter-- nos permite filtrar 
 const filteredNumbers = baloto.filter((el) => el >= 30);
 console.log(filteredNumbers);
+
