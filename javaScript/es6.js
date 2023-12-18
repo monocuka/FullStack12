@@ -113,9 +113,32 @@ setTimeout(() => {
 }, 5000);
 }
 demoCallBack()
+//Asincronismo, promesas
 
+const demoPromesas = () => {
+    let promesa = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("la promesa se resolvio");
+        }, 5000);
+    })
+    promesa
+    .then((response) => console.log(response))
+    .catch((error) => console.log(error));
 
+    let promesa2 = new Promise((resolve, reject) => {
+        let number = Math.floor(Math.random() * 10);
+        if (number % 2 === 0) {
+            resolve(number);            
+        }else{
+            reject(number);
+        }
+    });
 
+    promesa2 
+    .then((response) => console.log(`el numero ${response} es par`))
+    .catch((error) => console.log(`èl ${error} es impar`));
+}
+demoPromesas();
 
 
 
