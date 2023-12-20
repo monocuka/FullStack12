@@ -166,3 +166,23 @@ const multiPromises = () => {
 }
 multiPromises()
 
+const demoAsyncAwait = async () => {
+    const getMenus = new Promise((resolve, reject) => {
+        setTimeout(() => { resolve("---------trae los menu completos de todos ")}, 2000);
+    })
+    const responseMenus = await getMenus;
+    console.log(responseMenus);
+
+    const saveMenus = new Promise((resolve, reject) => {
+        setTimeout(() => { resolve("*******Guarda el pedido")}, 6000);
+    })
+    const responseMenusSave = await saveMenus;
+    console.log(responseMenusSave);
+
+    const exportExcel = new Promise((resolve, reject) => {
+        setTimeout(() => { resolve("Me exporta el excel de clientes y pedidos en 7 seg")}, 7000);
+    })
+    const exportClientMenu = await exportExcel;
+    console.log(exportClientMenu);
+}
+demoAsyncAwait()
