@@ -137,8 +137,32 @@ const demoPromesas = () => {
     promesa2 
     .then((response) => console.log(`el numero ${response} es par`))
     .catch((error) => console.log(`èl ${error} es impar`));
+
 }
 demoPromesas();
 
+const multiPromises = () => {
+    const promiseItaliana = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Menu de comida Italiana yumi!!");
+        }, 2000);
+    })
 
+    const promiseMexicana = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Taquitossss que rico :)");
+        }, 3000);
+    })
+
+    const promiseOriental = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Deli y saludable wiii!!");
+        }, 4000);
+    })
+
+    Promise.all([promiseItaliana, promiseMexicana, promiseOriental])
+    .then((response) => console.log(response))
+    .catch((error) => console.log(error));
+}
+multiPromises()
 
