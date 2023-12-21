@@ -137,8 +137,52 @@ const demoPromesas = () => {
     promesa2 
     .then((response) => console.log(`el numero ${response} es par`))
     .catch((error) => console.log(`èl ${error} es impar`));
+
 }
 demoPromesas();
 
+const multiPromises = () => {
+    const promiseItaliana = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Menu de comida Italiana yumi!!");
+        }, 2000);
+    })
 
+    const promiseMexicana = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Taquitossss que rico :)");
+        }, 3000);
+    })
 
+    const promiseOriental = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Deli y saludable wiii!!");
+        }, 4000);
+    })
+
+    Promise.all([promiseItaliana, promiseMexicana, promiseOriental])
+    .then((response) => console.log(response))
+    .catch((error) => console.log(error));
+}
+multiPromises()
+
+const demoAsyncAwait = async () => {
+    const getMenus = new Promise((resolve, reject) => {
+        setTimeout(() => { resolve("---------trae los menu completos de todos ")}, 2000);
+    })
+    const responseMenus = await getMenus;
+    console.log(responseMenus);
+
+    const saveMenus = new Promise((resolve, reject) => {
+        setTimeout(() => { resolve("*******Guarda el pedido")}, 6000);
+    })
+    const responseMenusSave = await saveMenus;
+    console.log(responseMenusSave);
+
+    const exportExcel = new Promise((resolve, reject) => {
+        setTimeout(() => { resolve("Me exporta el excel de clientes y pedidos en 7 seg")}, 7000);
+    })
+    const exportClientMenu = await exportExcel;
+    console.log(exportClientMenu);
+}
+demoAsyncAwait()
