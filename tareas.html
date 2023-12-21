@@ -30,6 +30,16 @@
         const taskInput = document.getElementById('task-input');
         const taskList = document.getElementById('task-list');
 
+        //funcion eliminar
+        const deleteTask = (index) => {
+            tasks.splice(index, 1);
+            updateTaskList();
+        }
+         //funcion editar
+        const editTask = (index) => {
+            taskInput.value = tasks[index];
+            editingIndex = index;
+        }
         //función actualizar tarea.
         const updateTaskList = () => {
             taskList.innerHTML = "";
@@ -40,15 +50,11 @@
                 //botin editar 
                 const editButton = document.createElement('button');
                 editButton.textContent = 'editar';
-                editButton.addEventListener('click', () => {
-                    //pendiente
-                })
+                editButton.addEventListener('click', () => editTask(index));
                 //boton eliminar 
                 const deleteBtn = document.createElement('button');
                 deleteBtn.textContent = "eliminar";
-                deleteBtn.addEventListener('click', () => {
-                    //pendiente
-                })
+                deleteBtn.addEventListener('click', () => deleteTask(index));
                 //agregar los botones al Li
                 li.appendChild(editButton);
                 li.appendChild(deleteBtn);
@@ -58,8 +64,14 @@
 
         //funcion para agregar una tarea. 
         const addTask = (task) => {
-            //agregamos la tarea
+        //condicion para ssaber si ya existe la tarea
+            if(editingIndex === -1){
+                //agregamos la tarea
             tasks.push(task);
+            }else {
+                tasks[editingIndex] = task;
+                editingIndex = -1;
+            }
             //limpiar el input
             taskInput.value = "";
             //Actualizamos
