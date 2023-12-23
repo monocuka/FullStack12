@@ -11,6 +11,25 @@ class Persona {
     Saludar() {
         console.log(`Hola, mi nombre es ${this.nombre} y tengo ${this.LaEdad} Años`);
     }
+    
+    //encapsulamiento
+//getters y setters permite acceder a los atributos privados.
+
+    getNombre () {
+        return this.#nombre;
+    };
+
+    setNombre (nuevoNombre) {
+        this.#nombre = nuevoNombre;
+    }
+    getEdad () {
+        return this.#edad;
+    };
+    setEdad (nuevaEdad) {
+        this.#edad = nuevaEdad;
+    }
 }
-const Persona1 = new Persona("pepita", 30);
-const Persona2 = new Persona("honey", 4);
+//abstraccion es momdelar algo de la vida real en una clase: siempre pensando que la clase tiene atributos y tiene metodos
+//atributos: caracteristicas de lo que se esta modelando
+//metodos: funciones o verbos de las cosas que se pueden hacer. 
+
