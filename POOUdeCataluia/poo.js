@@ -12,3 +12,5 @@ class Persona {
         console.log(`Hola, mi nombre es ${this.nombre} y tengo ${this.LaEdad} Años`);
     }
 }
+const Persona1 = new Persona("pepita", 30);
+const Persona2 = new Persona("honey", 4);
