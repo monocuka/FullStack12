@@ -19,4 +19,4 @@ class Sucursal {
     getEmpleados() {
         return this.#empleados;
     }
-}
+} 

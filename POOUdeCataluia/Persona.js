@@ -33,3 +33,6 @@ class Persona {
 //atributos: caracteristicas de lo que se esta modelando
 //metodos: funciones o verbos de las cosas que se pueden hacer. 
 
+
+
+
