@@ -21,3 +21,4 @@ class Cliente extends Persona {
     setSaldo(nuevoSaldo) {
         this.#saldoCuenta = nuevoSaldo;
     }
+}
