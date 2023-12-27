@@ -2,6 +2,19 @@
 import * as operaciones from './Calculadora';
 import Empleado from './empleado'
 
+//los enum
+enum DiadeLaSemana {
+    Lunes,
+    Martes,
+    Miercoles,
+    Jueves,
+    Viernes,
+    Sabado,
+    Domingo,
+}
+console.log(DiadeLaSemana[2]);
+
+
 class Persona {
     constructor(public nombre: string, public edad: number){
     }

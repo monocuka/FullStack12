@@ -2,6 +2,18 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 // para crear una clase lo que se hace es poner los atributos y sin son privados 
 var operaciones = require("./Calculadora");
+//los enum
+var DiadeLaSemana;
+(function (DiadeLaSemana) {
+    DiadeLaSemana[DiadeLaSemana["Lunes"] = 0] = "Lunes";
+    DiadeLaSemana[DiadeLaSemana["Martes"] = 1] = "Martes";
+    DiadeLaSemana[DiadeLaSemana["Miercoles"] = 2] = "Miercoles";
+    DiadeLaSemana[DiadeLaSemana["Jueves"] = 3] = "Jueves";
+    DiadeLaSemana[DiadeLaSemana["Viernes"] = 4] = "Viernes";
+    DiadeLaSemana[DiadeLaSemana["Sabado"] = 5] = "Sabado";
+    DiadeLaSemana[DiadeLaSemana["Domingo"] = 6] = "Domingo";
+})(DiadeLaSemana || (DiadeLaSemana = {}));
+console.log(DiadeLaSemana[2]);
 var Persona = /** @class */ (function () {
     function Persona(nombre, edad) {
         this.nombre = nombre;
